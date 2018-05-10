@@ -1,8 +1,11 @@
 class Deck
-  attr_reader :cards
 
   def initialize(card_array)
     @cards = card_array
+  end
+
+  def cards
+    @cards
   end
 
   def count

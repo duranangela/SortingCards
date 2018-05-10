@@ -1,4 +1,5 @@
 require_relative "guess"
+require "pry"
 
 class Round
   attr_reader :deck,
@@ -17,15 +18,14 @@ class Round
   def record_guess(response)
     guess = Guess.new(response, current_card)
     @guesses << guess
-    number_correct
+    if guesses.last.feedback == "Correct!"
+      @correct_answers += 1
+    end
     deck.cards << deck.cards.shift
     guess
   end
 
   def number_correct
-    if guesses.last.feedback == "Correct!"
-      @correct_answers += 1
-    end
     @correct_answers
   end
 

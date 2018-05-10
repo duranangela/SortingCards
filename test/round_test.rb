@@ -4,7 +4,6 @@ require "./lib/round"
 require "./lib/card"
 require "./lib/deck"
 require "./lib/guess"
-require "pry"
 
 class RoundTest < Minitest::Test
 
@@ -41,7 +40,6 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_records_a_guess
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])
@@ -50,7 +48,6 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_puts_guess_somewhere
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])
@@ -60,7 +57,6 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_gives_proper_feedback
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])
@@ -70,7 +66,6 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_counts_number_correct
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])
@@ -80,7 +75,6 @@ class RoundTest < Minitest::Test
   end
 
   def test_current_card_changes_after_guess
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])
@@ -90,7 +84,6 @@ class RoundTest < Minitest::Test
   end
 
   def test_different_guess
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])
@@ -101,7 +94,6 @@ class RoundTest < Minitest::Test
   end
 
   def test_wrong_guess_feedback
-    skip
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])

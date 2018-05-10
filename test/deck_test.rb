@@ -2,7 +2,6 @@ require "minitest/autorun"
 require "minitest/pride"
 require "./lib/deck"
 require "./lib/card"
-require "pry"
 
 class DeckTest < Minitest::Test
 
@@ -68,5 +67,13 @@ class DeckTest < Minitest::Test
     assert_equal [card_2, card_1, card_3, card_5, card_6, card_4], deck.sort
   end
 
+  def test_it_does_not_take_duplicate_cards
+    skip
+    card_1 = Card.new("4","Hearts")
+    card_2 = Card.new("3", "Clubs")
+    card_3 = Card.new("4","Hearts")
+    deck = Deck.new([card_1, card_2, card_3])
+    assert_equal ([card_1, card_2]), deck.cards
+  end
 
 end
